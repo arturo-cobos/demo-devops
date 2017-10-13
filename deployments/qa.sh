@@ -1,5 +1,6 @@
 npm install -g now
 echo "deploying"
-url= $(now --docker -t $now_token)
+URL=$(now --docker --public --token $NOW_TOKEN)
 echo "running acceptance on $URL"
 curl --silent -L $URL
+echo "fin fin"
